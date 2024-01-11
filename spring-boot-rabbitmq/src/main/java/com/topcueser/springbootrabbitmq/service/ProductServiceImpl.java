@@ -49,7 +49,7 @@ public class ProductServiceImpl implements ProductService {
             String randomFileName = UUID.randomUUID() + "." + Helper.getExtensionByFilename(fileName);
 
             Attachment attachment = new Attachment(randomFileName, uploadFile.getContentType(), uploadFile.getSize());
-            Product product = new Product(createProductDto.name(), createProductDto.price(),attachment);
+            Product product = new Product(createProductDto.name(), createProductDto.price(), attachment);
 
             Product savedProduct = productRepository.save(product);
 
@@ -68,6 +68,7 @@ public class ProductServiceImpl implements ProductService {
             return new ResponseProductDto(savedProduct.getName(), savedProduct.getPrice(), responseAttachmentDto);
 
         }catch (Exception e){
+            logger.error("Could not save File: " + e.getMessage());
             throw new Exception("Could not save File: " + fileName);
         }
     }

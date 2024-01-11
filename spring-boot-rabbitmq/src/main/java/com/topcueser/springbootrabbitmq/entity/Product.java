@@ -3,7 +3,6 @@ package com.topcueser.springbootrabbitmq.entity;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Digits;
-import jakarta.validation.constraints.NotNull;
 
 import java.math.BigDecimal;
 

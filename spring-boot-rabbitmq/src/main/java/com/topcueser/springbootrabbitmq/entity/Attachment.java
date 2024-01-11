@@ -1,6 +1,7 @@
 package com.topcueser.springbootrabbitmq.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
 
