@@ -13,6 +13,7 @@
         <module>spring-boot-rabbitmq</module>
         <module>basic-rabbitmq</module>
         <module>spring-boot-jpa-one2one</module>
+        <module>spring-boot-jpa-one2many</module>
     </modules>
 
     <properties>
